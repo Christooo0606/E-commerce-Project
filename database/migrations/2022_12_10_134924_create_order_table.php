@@ -13,9 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('order', function (Blueprint $table) {
+        Schema::create('orders', function (Blueprint $table) { // Cambié 'order' a 'orders'
             $table->id();
-            $table->string('user_id');
+            $table->unsignedBigInteger('user_id'); // Cambié 'string' a 'unsignedBigInteger'
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade'); // Agregué clave foránea
+            $table->string('fname');
             $table->string('lname');
             $table->string('email');
             $table->string('phoneno');
@@ -25,13 +27,12 @@ return new class extends Migration
             $table->string('state');
             $table->string('country');
             $table->string('pincode');
-            $table->string('total_price'); // Elimina una de estas líneas si ya existe
+            $table->decimal('total_price', 8, 2); // Cambié 'string' a 'decimal'
             $table->tinyInteger('status')->default(0);
             $table->string('message')->nullable();
             $table->string('tracking_no');
             $table->timestamps();
         });
-        
     }
 
     /**
@@ -41,6 +42,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('order');
+        Schema::dropIfExists('orders'); // Cambié 'order' a 'orders'
     }
 };

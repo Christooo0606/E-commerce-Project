@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Contact;
 use Illuminate\support\Facades\Auth;
 
+
 class contactComplains extends Controller
 {
     public function index () 
