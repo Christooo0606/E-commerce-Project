@@ -1,12 +1,12 @@
 <x-mail::message>
-# Introduction
+    # Introducción
 
-The body of your message.
+   por favor verifica tu cuenta para continuar
 
-<x-mail::button :url="''">
-Button Text
-</x-mail::button>
+    <x-mail::button :url="''">
+        verificar correo
+    </x-mail::button>
 
-Thanks,<br>
-{{ config('app.name') }}
+    Gracias,<br>
+    {{ config('MOTORSMX') }}
 </x-mail::message>

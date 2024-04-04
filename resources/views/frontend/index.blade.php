@@ -22,7 +22,7 @@
                         <div class="card-body zoom postion-relative">
                             <img src="{{asset('images/accessories.jpg')}}"  class="w-100 lazy rounded" height="200px"   alt="">
                             <div class="text-light position-absolute top-50 start-50 translate-middle">
-                                <h4 style="letter-spacing:3px; ">ACCESSORIES</h4>
+                                <h4 style="letter-spacing:3px; ">ACCESSORIOS</h4>
                             </div>
                         </div>
                     </a>
@@ -30,7 +30,7 @@
                         <div class="card-body zoom postion-relative">
                             <img src="{{asset('images/equipments.jpg')}}"  class="w-100 lazy rounded" height="200px"  alt="">
                             <div class="text-light position-absolute top-50 start-50 translate-middle">
-                                <h4 style="letter-spacing:3px; ">EQUIPMENTS</h4>
+                                <h4 style="letter-spacing:3px; ">EQUIPO</h4>
                             </div>
                         </div>
                     </a>
@@ -38,7 +38,7 @@
                         <div class="card-body zoom postion-relative">
                             <img src="{{asset('images/supplements.jpg')}}"  class="w-100 lazy rounded" height="200px"  alt="">
                             <div class="text-light position-absolute top-50 start-50 translate-middle">
-                                <h4 style="letter-spacing:3px; ">SUPPLEMENTS</h4>
+                                <h4 style="letter-spacing:3px; ">MOTOS</h4>
                             </div>
                         </div>
                     </a>

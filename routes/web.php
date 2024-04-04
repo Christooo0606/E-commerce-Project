@@ -15,6 +15,7 @@ use App\Http\Controllers\frontend\UserController;
 use App\Http\Controllers\frontend\contactComplains;
 use Illuminate\support\Facades\Mail;
 use App\Mail\WelcomeMail;
+use Illuminate\Support\Facades\Auth;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -41,7 +42,7 @@ Route::get('view-product/{prod_slug}',[FrontController::class ,  'eachProdView']
 Auth::routes(['verify' => true]);
 
 Route::get('/email', function(){
-    Mail::to('mrmoiz1.dev@gmail.com')->send(new WelcomeMail());
+    Mail::to('2123200391@soy.utj.edu.mx')->send(new WelcomeMail());
     return new WelcomeMail();
 });
 

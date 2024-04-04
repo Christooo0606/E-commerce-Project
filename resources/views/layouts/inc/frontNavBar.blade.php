@@ -1,16 +1,16 @@
 <nav class="navbar navbar-expand-lg navbar-default navbar-dark fixed-top">
   <div class="container-fluid  navbar-default ">
-     <a class="navbar-brand" href="{{url('/')}}">Pain &  Gain</a>
+     <a class="navbar-brand" href="{{url('/')}}">MOTORSMX</a>
    
      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
      <span class="navbar-toggler-icon"></span>
      </button>
      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav ms-auto">
-           <a class="nav-link px-3 active" aria-current="page" href="/">Home</a>
-           <a class="nav-link  px-3 " href="{{url('category')}}">Categories</a>
-           <a class="nav-link  px-3 " href="{{url('contact')}}">Contact</a>
-           <a class="nav-link  px-3 " href="{{url('about')}}">About</a>
+           <a class="nav-link px-3 active" aria-current="page" href="/">Inicio</a>
+           <a class="nav-link  px-3 " href="{{url('category')}}">Categorias</a>
+           <a class="nav-link  px-3 " href="{{url('contact')}}">Contacto</a>
+           <a class="nav-link  px-3 " href="{{url('about')}}">Nosotros</a>
         </div>
         <div class="navbar-nav ms-auto justify-content-center">
          
@@ -43,7 +43,7 @@
                <img
             src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img (31).webp"
             class="rounded-circle"
-            height="22"
+            height="50"
             alt="Portrait of a Woman"
             loading="lazy"
           />
@@ -53,7 +53,7 @@
                <a class="dropdown-item"> {{ Auth::user()->name }}</a>
               
                   <a class="dropdown-item" href="{{url('my-order')}}">
-                     My Orders
+                     Mi orden
                   </a>
                 
                  <a class="dropdown-item" href="{{ route('logout') }}"

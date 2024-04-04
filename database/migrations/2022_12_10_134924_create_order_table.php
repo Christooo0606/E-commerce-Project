@@ -14,7 +14,6 @@ return new class extends Migration
     public function up()
     {
         Schema::create('order', function (Blueprint $table) {
-           
             $table->id();
             $table->string('user_id');
             $table->string('lname');
@@ -26,13 +25,13 @@ return new class extends Migration
             $table->string('state');
             $table->string('country');
             $table->string('pincode');
-            $table->string('total_price');
-            $table->tinyInteger('status')->default('0');
+            $table->string('total_price'); // Elimina una de estas líneas si ya existe
+            $table->tinyInteger('status')->default(0);
             $table->string('message')->nullable();
             $table->string('tracking_no');
-            $table->string('total_price');
             $table->timestamps();
         });
+        
     }
 
     /**
