@@ -14,18 +14,23 @@
         </div>
         <div class="navbar-nav ms-auto justify-content-center">
          
+         
 
+
+       
            @guest
            @if (Route::has('login'))
            <li class="nav-item">
               <a class="nav-link cartblack" id="loginblack" href="{{ route('login') }}">{{ __('Login') }}</a>
             </li>
             @endif
+
             @if (Route::has('register'))
             <li class="nav-item">
                <a class="nav-link cartblack" id="loginblack"  href="{{ route('register') }}">{{ __('Register') }}</a>
             </li>
             @endif
+           
             @else
 
             <div class="input-group hello">
@@ -40,13 +45,17 @@
             <a class="cartblack nav-link" href="{{url('cart')}}"><i class="fa-solid fa-cart-shopping"></i></a>
             <li class="nav-item dropdown">
               <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-               <img
-            src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img (31).webp"
-            class="rounded-circle"
-            height="50"
-            alt="Portrait of a Woman"
-            loading="lazy"
-          />
+             <!-- FOTO-->
+                  <!-- Verifica si el usuario tiene un avatar -->
+                  @if(Auth::user()->avatar)
+                  <!-- Muestra la imagen del avatar con tamaño 40x40 -->
+                  <img src="{{ Auth::user()->avatar }}" alt="Avatar de usuario" width="40" height="40">
+                  @else
+                  <!-- Muestra un avatar predeterminado o un mensaje de que no hay avatar -->
+                  <img src="{{ url('path/to/default/avatar.png') }}" alt="Avatar predeterminado" width="40" height="40">
+                  @endif
+
+          
               </a>
               <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
 

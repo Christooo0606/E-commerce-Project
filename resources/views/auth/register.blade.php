@@ -9,7 +9,7 @@
           <div class="row justify-content-center">
             <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
 
-              <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Sign up</p>
+              <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">REGISTRO</p>
 
               <form class="mx-1 mx-md-4" method="POST" action="{{ route('register') }}">
                 @csrf
@@ -63,18 +63,13 @@
 
                 <div class="d-flex justify-content-center flex-column mx-4 mb-3 mb-lg-4">
                   <button type="submit" class="btn btn-outline-primary btn-lg">{{ __('Register') }}</button>
-                  <p class="small fw-bold mt-2 pt-1 mb-0">Already have an account? <a href="{{url('/login')}}"
-                    class="link-danger">Login</a></p>
+                  <a href="/google-auth/redirect" id="loginblack" class="btn btn-outline-primary btn-lg mt-2">Registrarse con Google</a>
+                  <p class="small fw-bold mt-2 pt-1 mb-0">Ya tienes una cuenta? <a href="{{url('/login')}}"
+                    class="link-danger">INGRESAR</a></p>
                   </div>
               </form>
 
             </div>
-            {{-- <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
-
-              <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/draw1.webp"
-                class="img-fluid" alt="Sample image">
-
-            </div> --}}
           </div>
         </div>
       </div>

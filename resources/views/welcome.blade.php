@@ -32,9 +32,13 @@
                         @if (Route::has('register'))
                             <a href="{{ route('register') }}" class="ml-4 ">Register</a>
                         @endif
+
+                        
                     @endauth
                 </div>
             @endif
         </div>
     </body>
 </html>
+
+<li class="navbar-link"><a href="/google-auth/redirect" class="text-white">Ingresar con Google</a></li>

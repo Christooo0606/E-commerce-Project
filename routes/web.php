@@ -16,6 +16,8 @@ use App\Http\Controllers\frontend\contactComplains;
 use Illuminate\support\Facades\Mail;
 use App\Mail\WelcomeMail;
 use Illuminate\Support\Facades\Auth;
+use Laravel\Socialite\Facades\Socialite;
+use App\Models\User;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -34,6 +36,28 @@ Route::get('view-category/{cate_slug}/{prod_slug}',[FrontController::class ,  'p
 Route::get('view-product/{prod_slug}',[FrontController::class ,  'eachProdView']);
 
 
+Route::get('/google-auth/redirect', function () {
+    return Socialite::driver('google')->redirect();
+});
+ 
+Route::get('/google-auth/callback', function () {
+   
+        $user_google = Socialite::driver('google')->stateless()->user();
+      
+     
+        $user = User::updateOrCreate([
+            'google_id' => $user_google->id,
+        ], [
+            'name' => $user_google->name,
+            'avatar' => $user_google->avatar,
+            'email' => $user_google->email,
+          
+        ]);
+     
+        Auth::login($user);
+     
+        return redirect('/');
+    });
 
 
 
